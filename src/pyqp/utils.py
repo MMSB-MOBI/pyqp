@@ -31,6 +31,7 @@ class proteomicWrapper():
     def remove(self, uniprotID):
         df = self.pdFrame
         df.drop(df.loc[df['Accession']==uniprotID].index, axis=0, inplace=True)
+
     def __len__(self):
         return len(self.pdFrame.index)
 
